@@ -5,7 +5,7 @@ import Button from "components/CustomButtons/Button.js";
 import { makeStyles} from "@material-ui/core/styles";
 import styles from 'assets/jss/material-dashboard-react/views/page404Style'
 
-const errorImg = require("assets/img/illustration_404.svg").default
+const errorImg = require("assets/img/404.svg").default
 const useStyles = makeStyles(styles);
 
 export default function Page404() {

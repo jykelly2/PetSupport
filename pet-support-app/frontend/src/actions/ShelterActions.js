@@ -21,8 +21,6 @@ import {
   SHELTER_UPDATE_FAIL,
 } from '../constants/ShelterConstants';
 
-const emptyImg = require("../assets/img/photo-1431578500526-4d9613015464.jpeg").default
-
 export const createShelter = (shelter) => async (dispatch, getState) => {
   dispatch({ type: SHELTER_CREATE_REQUEST, payload: shelter });
   const {

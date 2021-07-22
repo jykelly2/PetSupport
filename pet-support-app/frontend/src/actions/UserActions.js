@@ -38,8 +38,6 @@ import {
   USER_PICTURE_FAIL,
 } from '../constants/UserConstants';
 
-const emptyImg = require("../assets/img/photo-1431578500526-4d9613015464.jpeg").default
-
 export const createUser = (user) => async (dispatch, getState) => {
   dispatch({ type: USER_CREATE_REQUEST, payload: user });
   const {

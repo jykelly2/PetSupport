@@ -24,7 +24,6 @@ const usersRouter = require('./routes/users');
 const animalsRouter = require('./routes/animals');
 const bookingsRouter = require('./routes/bookings');
 const clientsRouter = require('./routes/clients');
-const authRouter = require('./routes/auth');
 const imagesRouter = require('./routes/images');
 
 app.use('/shelters', sheltersRouter);
@@ -32,7 +31,6 @@ app.use('/users', usersRouter);
 app.use('/animals', animalsRouter);
 app.use('/bookings', bookingsRouter);
 app.use('/clients', clientsRouter);
-app.use('/auth', authRouter);  
 app.use('/images', imagesRouter);  
 
 app.listen(port, () => {

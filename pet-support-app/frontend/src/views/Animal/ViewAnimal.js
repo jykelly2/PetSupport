@@ -25,7 +25,7 @@ import EditIcon from '@material-ui/icons/Edit';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 
-const emptyImg = require("../../assets/img/photo-1431578500526-4d9613015464.jpeg").default
+const emptyImg = require("assets/img/empty.jpeg").default
 
 const useStyles = makeStyles(styles);
 export default function ViewAnimal(props){

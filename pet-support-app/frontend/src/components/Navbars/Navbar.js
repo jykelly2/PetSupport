@@ -1,38 +1,22 @@
 import React from "react";
-import classNames from "classnames";
 import PropTypes from "prop-types";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import CustomIconButton from "components/CustomButtons/CustomIconButton"
-import CustomInput from "components/CustomInput/CustomInput.js";
 import Hidden from "@material-ui/core/Hidden";
-import Paper from '@material-ui/core/Paper';
-import InputBase from '@material-ui/core/InputBase';
-import IconButton from '@material-ui/core/IconButton';
-import SearchIcon from '@material-ui/icons/Search';
 // @material-ui/icons
-import Menu from "@material-ui/icons/Menu";
-import MenuOpen from '@material-ui/icons/MenuOpen';
-import ChevronLeft from '@material-ui/icons/ChevronLeft';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 // core components
 import AdminNavbarLinks from "./AdminNavbarLinks.js";
-import Image from 'material-ui-image'
-import Button from "components/CustomButtons/Button.js";
-import clsx from 'clsx';
 import styles from "assets/jss/material-dashboard-react/components/headerStyle.js";
 
-import appLogo from "assets/img/logos/cover1.png"
 const useStyles = makeStyles(styles);
 
 export default function Header(props) {
   const classes = useStyles();
-  const { color, logo, profileImg } = props;
-  const appBarClasses = classNames({
-    [" " + classes[color]]: color,
-  });
+  const { color, profileImg } = props;
   return (
     <AppBar elevation={0} className={props.labelsOpen ? classes.appBar: classes.appBarIconClosed}>
       <Toolbar className={classes.container}>

@@ -4,7 +4,7 @@ import {
     Image
 } from "react-bootstrap";
 
-const emptyImg = require("../../assets/img/photo-1431578500526-4d9613015464.jpeg").default
+const emptyImg = require("assets/img/empty.jpeg").default
 
 export default class Pictures extends Component {
   constructor(props){

@@ -2,7 +2,6 @@ import {
   drawerWidth,
   transition,
   boxShadow,
-  defaultFont,
   primaryColor,
   primaryBoxShadow,
   infoColor,
@@ -10,7 +9,6 @@ import {
   warningColor,
   dangerColor,
   whiteColor,
-  lightBlueColor,
   grayColor,
   blackColor,
   hexToRgb,
@@ -69,23 +67,25 @@ const sidebarStyle = (theme) => ({
     },
   },
   img:{
-    width: "187px", //175 //200
-    height: "40px", //45
+    width: "187px", 
+    height: "40px", 
     marginTop:"3px",
-    marginLeft: "14px", //18
+    marginLeft: "14px", 
     marginBottom: "10px",
+    objectFit: 'contain',
     transition: "all 500ms ease 0s",
   },
   imgLabelClosed: {
-    width: "185px", //175 //200
-    height: "40px", //45
+    width: "185px", 
+    height: "40px", 
     marginTop:"3px",
-    marginLeft: "20px", //18
+    marginLeft: "20px", 
     marginBottom: "5px",
+    objectFit: 'contain',
     transition: "all 500ms ease 0s",
   },
   divider:{
-    margin: '5px 5px 3px 5px',  //top right bottom left
+    margin: '5px 5px 3px 5px', 
     height: "1px",
     borderRadius:"3px",
   },

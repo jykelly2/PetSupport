@@ -15,13 +15,11 @@ import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
 
-import navRoutes from "../Routes/NavRoutes.js";
-import adminRoutes from "../Routes/routes.js";
+import navRoutes from "../routes/NavRoutes.js";
+import adminRoutes from "../routes/Routes.js";
 
+//styles
 import styles from "assets/jss/material-dashboard-react/layouts/adminStyle.js";
-
-import bgImage from "assets/img/sidebar-4.jpg";
-import logo from "assets/img/reactlogo.png";
 
 let ps;
 const allRoutes = [...adminRoutes, ...navRoutes];
@@ -38,7 +36,6 @@ export default function Admin({ ...rest }) {
   // ref to help us initialize PerfectScrollbar on windows devices
   const mainPanel = React.createRef();
   // states and functions
-  const [image, setImage] = React.useState(bgImage);
   const [color, setColor] = React.useState("purple");
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [mobile, setMobile] = React.useState(window.innerWidth <= 960? true: false);
@@ -132,7 +129,6 @@ export default function Admin({ ...rest }) {
             [classes.mainPanelLabelClosed]: !iconLabelsOpen,
           })} >
           <Navbar
-          logo={logo}
           profileImg={pictureSrc}
           handleDrawerToggle={handleDrawerToggle}
           handleIconDrawerToggle={handleIconDrawerToggle}

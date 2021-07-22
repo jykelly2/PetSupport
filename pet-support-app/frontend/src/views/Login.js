@@ -1,36 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Avatar from '@material-ui/core/Avatar';
 import {signin, loginUser} from '../actions/UserActions'
 import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import CustomTextField from '../components/CustomInput/CustomTextField'
 import Button from "../components/CustomButtons/Button.js";
-import GridContainer from "../components/Grid/GridContainer.js";
-import GridItem from "../components/Grid/GridItem.js";
 import { makeStyles } from '@material-ui/core/styles';
-import LoadingBox from '../components/LoadingBox';
-import MessageBox from '../components/MessageBox';
 //styles
-import {
-  primaryColor,
-  infoColor,
-} from "assets/jss/material-dashboard-react.js";
+import styles from "assets/jss/material-dashboard-react/views/loginStyle.js";
 
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 
-const coverImg = require("../assets/img/logos/cover2.jpeg").default
-const emptyImg = require("../assets/img/empty1.png").default
-const logoIcon = require("../assets/img/logos/logoIcon.png").default
+const coverImg = require("../assets/img/logos/cover.jpeg").default
+const logo = require("../assets/img/logos/logo.png").default
 
 const validationSchema = yup.object({
   email: yup
@@ -50,49 +39,10 @@ function Copyright() {
         Pet Support
       </Link>{' '}
       {new Date().getFullYear()}
-      {'.'}
     </Typography>
   );
 }
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    height: '100vh',
-  },
-  image: {
-   width: '100%',
-   height: '100%',
-    //backgroundImage: 'url(https://source.unsplash.com/random)',
-    //backgroundRepeat: 'no-repeat',
-    //backgroundColor:
-      //theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
-    //backgroundSize: 'cover',
-    //backgroundPosition: 'center',
-  },
-  paper: {
-    margin: theme.spacing(8, 4),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    //border: '0.1px solid lightgray'
-   // border: 3,
-   // borderColor:theme.palette.secondary.main
-    //backgroundColor: primaryColor[7]//theme.palette.secondary.main,
-  },
-  form: {
-    width: '100%', 
-    marginTop: theme.spacing(1),
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
-  marginTop: {
-    marginTop: theme.spacing(0),
-  },
-}));
+const useStyles = makeStyles(styles);
 
 export default function SignInSide() {
   const classes = useStyles();
@@ -123,28 +73,14 @@ export default function SignInSide() {
   });
 
   return (
-  //   <div>
-  //   {loading ? (<LoadingBox></LoadingBox>
-  // ) : error ? (
-  //   <MessageBox variant="danger">{error}</MessageBox>
-  // ) : (
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
-      {/* <Grid item  xs={false} sm={4} md={7} className={classes.image}/> */}
-      <Grid item  xs={false} sm={4} md={7}>
+      <Grid  component={Box} item xs={false} sm={5} md={7} display={{ xs: 'none', sm:'block', md: 'block' }}>
         <img className={classes.image} src={coverImg}/>
       </Grid>
-      <Grid item  xs={12} sm={8} md={5} component={Paper} elevation={1} square>
+      <Grid item  xs={12} sm={7} md={5} component={Paper} elevation={1} square>
         <div className={classes.paper}>
-          <Avatar  variant="square" className={classes.avatar} src={logoIcon}/>
-          {/* style={{
-             border: '0.1px solid lightgray'
-          }} */}
-            {/* <LockOutlinedIcon />
-          </Avatar> */}
-          <Typography component="h1" variant="h5">
-            Sign in
-          </Typography>
+          <img className={classes.logo} src={logo}/>
           <form className={classes.form} onSubmit={formik.handleSubmit}>
             <CustomTextField
              className={classes.marginTop}
@@ -205,8 +141,6 @@ export default function SignInSide() {
         </div>
       </Grid>
     </Grid>
-    // )}
-    // </div>
   );
 }
 

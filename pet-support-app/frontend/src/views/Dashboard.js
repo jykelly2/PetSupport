@@ -41,7 +41,7 @@ import Button from "components/CustomButtons/Button.js";
 import Typography from "@material-ui/core/Typography";
 import SaveAltOutlinedIcon from '@material-ui/icons/SaveAltOutlined';
 
-const emptyImg = require("assets/img/empty4.jpeg").default
+const emptyImg = require("assets/img/empty.jpeg").default
 const useStyles = makeStyles(styles);
 
 const formatDate = (dateString) => {

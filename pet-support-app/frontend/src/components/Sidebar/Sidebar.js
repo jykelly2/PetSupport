@@ -12,28 +12,21 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Box from "@material-ui/core/Box"
 import Avatar from '@material-ui/core/Avatar';
-import Icon from "@material-ui/core/Icon";
 import Tooltip from "@material-ui/core/Tooltip";
 import Typography from "@material-ui/core/Typography"
-import Divider from '@material-ui/core/Divider';
-import AdminNavbarLinks from "components/Navbars/AdminNavbarLinks.js";
-//import RTLNavbarLinks from "components/Navbars/RTLNavbarLinks.js";
 
 import styles from "assets/jss/material-dashboard-react/components/sidebarStyle.js";
-import appLogo from "assets/img/logos/cover1.png"
+import appLogo from "assets/img/logos/logo.png"
 
 const useStyles = makeStyles(styles);
 
 export default function Sidebar(props) {
   const classes = useStyles();
   let location = useLocation();
-  // verifies if routeName is the one active (in browser input)
   function activeRoute(routeNames) {
     return routeNames.some(name => location.pathname.includes(name))
   }
- // const { color, logo, image, logoText, routes } = props;
  const { color, image, routes, user, profileImg} = props;
-  //setDrawerWidth(props.labelsOpen? 120: 240)
   var brand = (
     <div >
       <img className={props.labelsOpen || props.mobileOpen ? classes.img : classes.imgLabelClosed}

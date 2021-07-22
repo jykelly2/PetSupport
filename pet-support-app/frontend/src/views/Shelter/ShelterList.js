@@ -24,8 +24,7 @@ import {
   SHELTER_DELETE_RESET,
 } from '../../constants/ShelterConstants';
 
-const emptyImg = require("../../assets/img/photo-1431578500526-4d9613015464.jpeg").default
-//const {alert} = require("../components/Notification/Notification");
+const emptyImg = require("assets/img/empty.jpeg").default
 
 export default function SheltersList(){
   const shelterList = useSelector((state) => state.shelterList);

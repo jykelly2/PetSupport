@@ -29,7 +29,7 @@ import {
   SHELTER_DELETE_RESET,
 } from '../../constants/ShelterConstants';
 
-const emptyImg = require("../../assets/img/photo-1431578500526-4d9613015464.jpeg").default
+const emptyImg = require("assets/img/empty.jpeg").default
 //const {alert} = require("../components/Notification/Notification");
 
 const useStyles = makeStyles(styles);
