@@ -177,7 +177,7 @@ export const signin = (email, password) => async (dispatch) => {
       const { data } = await axios.post('http://localhost:5000/users/login', authentication);
       dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
       window.sessionStorage.setItem('user', data.token)
-    } catch (error) {
+    } catch (error) {     
       dispatch({
         type: USER_LOGIN_FAIL,
         payload:

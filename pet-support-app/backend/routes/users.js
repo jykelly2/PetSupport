@@ -9,7 +9,7 @@ const unlinkeFile = util.promisify(fs.unlink)
 const {uploadFile , getSingleFile, getMultilpleFiles, deleteFiles, deleteSingleS3File} = require('../s3')
 const {upload, uploadStaffContents} = require('../middlewares/multer.js')
 const staffContentsBN = process.env.AWS_STAFF_CONTENTS_BUCKET_NAME
-
+const {roles} = require('../utils');
 router.route('/').get(isAuth, (req, res) => {
   console.log(req.user.role)
   const role = req.user.role
@@ -66,14 +66,19 @@ router.route('/login').post((req, res) => {
     try {
       if (await bcrypt.compare(password, user.password)){
         const{_id, firstname,lastname, email, role, password, picture, shelter} = user;
-        const userInfo = {id: _id, role:role, firstname: firstname, lastname:lastname,email:email, password:password, picture: picture, shelter:shelter}
-        const token = jwt.sign(userInfo, process.env.JWT_ACCESS_TOKEN, {expiresIn: '3d'});
-        res.json({token});
+        if(role != roles.Disabled){
+          const userInfo = {id: _id, role:role, firstname: firstname, lastname:lastname,email:email, password:password, picture: picture, shelter:shelter}
+          const token = jwt.sign(userInfo, process.env.JWT_ACCESS_TOKEN, {expiresIn: '3d'});
+          res.json({token});
+        }
+        else{
+          res.status(500).send({message:'Error: Your account is disabled'})
+        }        
       }else{
-        res.status(500).json('Error: ' + {err: "Password is incorrect"})
+        res.status(500).send({message:'Error: Password is incorrect'})
       }
     }catch{
-      res.status(500).json('Error: ' + {err: "Email is incorrect"})
+      res.status(500).json({message:'Error: Email is incorrect'})
     }
   })
   .catch(err => res.status(400).json('Error: ' + err));
