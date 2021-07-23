@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {signin, loginUser} from '../actions/UserActions'
 import CssBaseline from '@material-ui/core/CssBaseline';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
@@ -51,14 +53,15 @@ export default function SignInSide() {
   //const { userInfo,loading, error, success } = userSignin;
 
   const userLogin = useSelector((state) => state.userLogin);
-  const { loading, error, success } = userLogin;
+  const { loading: loadingLogin, error : errorLogin, success: successLogin } = userLogin;
+  
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (success) {
+    if (successLogin) {
       window.location = '/admin/dashboard';
     }
-  }, [dispatch, success]);
+  }, [dispatch, successLogin]);
 
   const formik = useFormik({
     initialValues: {
@@ -79,6 +82,12 @@ export default function SignInSide() {
         <img className={classes.image} src={coverImg}/>
       </Grid>
       <Grid item  xs={12} sm={7} md={5} component={Paper} elevation={1} square>
+      {loadingLogin ? (<LoadingBox></LoadingBox>
+          ) : errorLogin ? (
+             <MessageBox color="danger" message={errorLogin} place={"tr"}  openDuration={4000} ></MessageBox>
+          ) :(
+             null
+        )}
         <div className={classes.paper}>
           <img className={classes.logo} src={logo}/>
           <form className={classes.form} onSubmit={formik.handleSubmit}>

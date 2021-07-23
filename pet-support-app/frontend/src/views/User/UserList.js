@@ -15,6 +15,9 @@ import CustomBreadcrumbs from 'components/BreadCrumbs/BreadCrumbs'
 //style
 import { makeStyles} from "@material-ui/core/styles";
 import styles from 'assets/jss/material-dashboard-react/views/Users/userListStyle'
+import {
+  grayColor,
+} from "assets/jss/material-dashboard-react.js";
 // core components
 import GridItem from "components/Grid/GridItem.js";
 import GridContainer from "components/Grid/GridContainer.js";
@@ -165,6 +168,12 @@ export default function UsersList(props){
       else autoSizeAll(false)
   }
 
+  const getRowStyle = params => {
+      if (params.data.role === 'Disabled') {
+          return { background: grayColor[11] };
+      }
+  };
+
 return (
   <div>
       {loading ? (<LoadingBox></LoadingBox>
@@ -231,6 +240,7 @@ return (
         </CardHeader>
         <CardBody  className={"ag-theme-material"} style={{height: '100vh' }}> 
         <AgGridReact
+                  getRowStyle={getRowStyle}
                   defaultColDef={defaultColDef}
                   suppressRowClickSelection={true}
                   rowMultiSelectWithClick={true}

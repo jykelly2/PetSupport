@@ -148,7 +148,7 @@ export const userListReducer = (state = { loading: true, users:[], role: "Staff"
         return { loading: true };
       case USER_LOGIN_SUCCESS:
         return { loading: false, success:true };
-      case USER_LOGIN_FAIL:
+      case USER_LOGIN_FAIL:       
         return { loading: false, error: action.payload };
       case USER_LOGOUT:
         return {};
