@@ -3,7 +3,8 @@ export const roles =
          Administrator: 'Administrator',
          Staff: 'Staff',
          ScheduleManager: 'Schedule Manager',
-         AnimalManager: 'Animal Manager'
+         AnimalManager: 'Animal Manager',
+         Disabled: 'Disabled'
     }
 
 export const animalTypes = 
