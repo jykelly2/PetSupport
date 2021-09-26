@@ -55,10 +55,8 @@ Pet Support is a fully functional and deployed website application built using t
  </br>
  </br>
 <div>
-<p>Tablet
-<img src="https://github.com/jykelly2/PetSupport/blob/master/Pet%20Support%20Pictures/Dashboard%20Tablet.jpeg" height="600" width="400"></p>
+<img src="https://github.com/jykelly2/PetSupport/blob/master/Pet%20Support%20Pictures/Dashboard%20Tablet.jpeg" height="600" width="400">
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
- <p> **Phone:**
- <img src="https://github.com/jykelly2/PetSupport/blob/master/Pet%20Support%20Pictures/Dashboard%20Phone.jpeg" height="600" width="300"></p>
+ <img src="https://github.com/jykelly2/PetSupport/blob/master/Pet%20Support%20Pictures/Dashboard%20Phone.jpeg" height="600" width="300">
 <div>
  
