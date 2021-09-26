@@ -45,17 +45,20 @@ Pet Support is a fully functional and deployed website application built using t
     
     Staff Email: samanthalen@petsupport.ca
  
-## Screenshots
+## Screenshots - Website, Tablet, Phone
 
-### Web, Tablet and Mobile
+**Website**
 
 <div>
 <img src="https://github.com/jykelly2/PetSupport/blob/master/Pet%20Support%20Pictures/Dashboard.png" height="600" width="1100">
 <div>
  </br>
+ </br>
 <div>
+ **Tablet:**
 <img src="https://github.com/jykelly2/PetSupport/blob/master/Pet%20Support%20Pictures/Dashboard%20Tablet.jpeg" height="600" width="400">
- &nbsp; &nbsp; &nbsp;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ **Phone:**
  <img src="https://github.com/jykelly2/PetSupport/blob/master/Pet%20Support%20Pictures/Dashboard%20Phone.jpeg" height="600" width="300">
 <div>
  
