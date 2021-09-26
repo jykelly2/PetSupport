@@ -1,5 +1,5 @@
-# PetSupportApp
-PetSupportApp is a fully functional and deployed admin website application built using the MERN stack, which allows animal shelters to manage Animals, Staffs, Shelter information, and Bookings when clients apply to meet up with a pet for adoption process.
+# Pet Support
+Pet Support is a fully functional and deployed website application built using the MERN stack, which allows animal shelters to manage Animals, Staffs, Shelter information, and Bookings when clients apply to meet up with a pet for adoption process.
 
 #### Key features include:
   * Secure authentication and authorization using JWT tokens
@@ -52,10 +52,10 @@ PetSupportApp is a fully functional and deployed admin website application built
 <div>
 <img src="https://github.com/jykelly2/PetSupport/blob/master/Pet%20Support%20Pictures/Dashboard.png" height="600" width="1100">
 <div>
- <div><div>
+ </br>
 <div>
 <img src="https://github.com/jykelly2/PetSupport/blob/master/Pet%20Support%20Pictures/Dashboard%20Tablet.jpeg" height="600" width="400">
- <div><div>
+ &nbsp; &nbsp; &nbsp;
  <img src="https://github.com/jykelly2/PetSupport/blob/master/Pet%20Support%20Pictures/Dashboard%20Phone.jpeg" height="600" width="300">
 <div>
  
