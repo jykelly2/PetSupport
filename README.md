@@ -58,8 +58,8 @@ Pet Support is a fully functional and deployed website application built using t
 #### Tablet & Phone
 <div>
 <img src="https://github.com/jykelly2/PetSupport/blob/master/Pet%20Support%20Pictures/Dashboard%20Tablet.jpeg" height="600" width="400">
- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
- <img src="https://github.com/jykelly2/PetSupport/blob/master/Pet%20Support%20Pictures/Dashboard%20Phone.jpeg" height="600" width="300">
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;
+ <img src="https://github.com/jykelly2/PetSupport/blob/master/Pet%20Support%20Pictures/Dashboard%20Phone.jpeg" height="600" width="280">
 <div>
  
 #### Other Screenshots - All devices
@@ -87,7 +87,7 @@ Pet Support is a fully functional and deployed website application built using t
   
   <div>
 <img src="https://github.com/jykelly2/PetSupport/blob/master/Pet%20Support%20Pictures/Menu%20Phone.jpeg" height="600" width="280">
-     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;
    <img src="https://github.com/jykelly2/PetSupport/blob/master/Pet%20Support%20Pictures/View%20Shelter%20Phone.jpeg" height="600" width="280">
 <div>
 </br>
